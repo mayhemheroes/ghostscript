@@ -1,0 +1,4 @@
+project: PROJECT
+target: gs_device_eps2write_fuzzer
+cmds:
+- cmd: /out/gs_device_eps2write_fuzzer
