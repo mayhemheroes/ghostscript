@@ -63,7 +63,7 @@ fuzzers="gstoraster_fuzzer            \
          gs_device_tiffsep1_fuzzer"
 
 for fuzzer in $fuzzers; do
-  $CXX $CXXFLAGS $CUPS_LDFLAGS -std=c++11 -I. -I$SRC \
+  $CXX $CXXFLAGS $CUPS_LDFLAGS -std=c++17 -I. -I$SRC \
     $SRC/${fuzzer}.cc \
     -o "$OUT/${fuzzer}" \
     -Wl,-rpath='$ORIGIN' \
