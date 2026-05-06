@@ -32,6 +32,7 @@ popd
 rm -rf cups/libs || die
 rm -rf freetype || die
 rm -rf zlib || die
+rm -rf jpeg
 
 mv $SRC/freetype freetype
 
@@ -68,7 +69,7 @@ for fuzzer in $fuzzers; do
     -o "$OUT/${fuzzer}" \
     -Wl,-rpath='$ORIGIN' \
     $CUPS_LIBS \
-    $LIB_FUZZING_ENGINE bin/gs.a
+    $LIB_FUZZING_ENGINE bin/gs.a -ljpeg -ltiff
 done
 
 # Create PDF seed corpus

@@ -16,7 +16,7 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder
 
-RUN apt-get update && apt-get install -y autoconf zlibc libtool liblcms2-dev libpng-dev
+RUN apt-get update && apt-get install -y autoconf zlibc libtool liblcms2-dev libpng-dev libtiff-dev libjpeg-dev pkg-config
 RUN git clone --branch branch-2.2 --single-branch --depth 1 https://github.com/apple/cups.git cups
 RUN git clone --branch VER-2-12-1 --single-branch --depth 1 https://git.savannah.gnu.org/git/freetype/freetype2.git freetype
 COPY . ghostpdl
